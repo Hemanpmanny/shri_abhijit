@@ -1,0 +1,24 @@
+# Python / virtual environments
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Old versions I kept while experimenting (not needed to run the site)
+backup/
+
+# Original, heavy source files. The site uses the compressed/cut-out copies instead.
+/953426183640587837.jpg
+/shree_radhe.mp3
+assets/photos/*.png
+assets/frame/camel.png
+assets/frame/elephant.png
+assets/frame/horse.png
+assets/frame/peacock.png
+assets/frame/art_lotus.png
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
