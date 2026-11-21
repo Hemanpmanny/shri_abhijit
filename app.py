@@ -40,6 +40,14 @@ st.markdown(
       /* Streamlit puts a 16px gap between page elements; that gap pushed the invitation down and made the page scroll. */
       [data-testid="stVerticalBlock"] { gap: 0 !important; }
       [data-testid="stElementContainer"]:has(style) { display: none !important; }
+      /* Streamlit Community Cloud adds a "Created by <name>" / "Hosted with Streamlit" badge in the corner.
+         Its class names are generated and change between releases, so match on the stable part of the name. */
+      [class*="viewerBadge"], [class*="ViewerBadge"],
+      [class*="_profileContainer"], [class*="profileContainer"], [class*="_profilePreview"],
+      [class*="_container_gzau3"], [class*="StreamlitBadge"], [class*="streamlitBadge"],
+      [data-testid="appCreatorAvatar"], [data-testid="stAppDeployButton"], [data-testid="stDeployButton"],
+      .stAppDeployButton, .viewerBadge_container__r5tak, .viewerBadge_link__qRIco,
+      a[href*="streamlit.io/cloud"], a[href*="share.streamlit.io/user"] { display: none !important; visibility: hidden !important; }
       .stApp { background: #2a0612; }
       html, body { overscroll-behavior: none; }
       /* 100dvh = the visible height on phones (the address bar is not counted); 100vh is the fallback. */
